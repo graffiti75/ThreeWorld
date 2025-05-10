@@ -1,12 +1,15 @@
 
---- Create a Three.js VITE project
+# Create a Three.js VITE project
 
+```
 npm init -y
 npm install three
 npm install --save-dev gh-pages vite @types/three http-server
+```
 
---- package.json
+# Create `package.json`
 
+```
 {
   "name": "homeworld",
   "version": "1.0.0",
@@ -34,9 +37,11 @@ npm install --save-dev gh-pages vite @types/three http-server
     "vite": "^6.3.5"
   }
 }
+```
 
---- index.js
+# Create `index.js`
 
+```
 import * as THREE from "three";
 import { OrbitControls } from "three/examples/jsm/controls/OrbitControls.js";
 
@@ -95,9 +100,11 @@ function animate() {
   renderer.render(scene, camera);
 }
 animate();
+```
 
---- index.html
+# Create `index.html`
 
+```
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -116,18 +123,23 @@ animate();
   <script type="module" src="index.js"></script>
 </body>
 </html>
+```
 
---- vite.config.js
+# Create `vite.config.js`
 
+```
 export default {
   base: "/ThreeWorld/",
   server: {
     open: true,
   },
 };
+```
 
---- .gitignore
+# Create `.gitignore`
 
+```
 node_modules/
 dist/
 .vite/
+```
